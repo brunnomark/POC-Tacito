@@ -1,0 +1,107 @@
+.painelcontrole {
+    padding: 0;
+    margin-left: 0px;
+    transition: margin-left .3s ease-in;
+    overflow: visible;
+}
+
+.painelcontrole.open {
+    position: fixed;
+    margin-left: 400px;
+    transition: margin-left .4s ease-out;
+}
+
+.painelcontrole h1 {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    background-color: lightsteelblue;
+    color: white;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    margin-top: 5px;    
+    padding: 10px;
+}
+
+.painelcontrole h2 {
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    float: left;
+    margin-left: 1.5rem;
+    font-size: 20px;
+}
+
+.painelcontrole h2 span.block-1{
+    display: flex;
+    justify-content: flex-start;
+    width:50%;
+    text-align: center;
+}
+  
+.painelcontrole h2 span.block-2{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 50%;
+    font-size: 13px;
+    margin: 10px 65px;
+}
+
+.painelcontrole button {
+    position: relative;
+    background-color: antiquewhite;
+    float: right;
+    padding: 0.4rem;
+    margin: 10px 20px;
+    overflow: hidden;  
+    border-width: 0.1rem;
+    outline: none;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+    font-size: 13px;
+    cursor: pointer;
+    transition: background-color .3s;
+}
+
+.painelcontrole button:hover, 
+.painelcontrole button:focus {
+    background-color: gray;
+    color: black;
+    transition: background-color .3s;
+}
+
+.painelcontrole button i {
+    color: green;
+}
+
+.painelcontrole ul {
+    padding-left: 15px;
+    display: flex;   
+    width: 100%;
+    flex-direction: column;
+    float: left;
+}
+
+.painelcontrole li {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    float: left;
+}
+
+@media (max-width: 586px) {
+    .painelcontrole button {
+        display: none;        
+    }
+    .painelcontrole {
+        margin-left: 0px;
+        transition: margin-left .3s ease-in;
+    }
+    .painelcontrole.open {      
+        margin-left: 70%;
+        transition: margin-left .4s ease-out;
+    }
+}

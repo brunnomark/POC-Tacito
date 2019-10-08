@@ -1,0 +1,23 @@
+.checkbox {
+    display: inherit;
+    width: 100%;
+    margin-top: -20px;
+}
+
+.checkbox p {
+    width: inherit;
+    display: flex;
+    align-items: center;
+}
+
+.block-a{
+    width:50%;
+}
+  
+.block-b{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width:50%;
+    margin: 0 65px;
+}
