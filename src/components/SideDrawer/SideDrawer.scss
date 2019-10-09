@@ -1,0 +1,46 @@
+@import "../Utility/Styles/mixins";
+
+.side-drawer {
+    height: 100%;
+    background: white;
+    box-shadow: 1px 0px 7px rgba(0, 0, 0, 1.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 70%;
+    max-width: 400px;
+    z-index: 200;
+    transform: translateX(-100%);
+    @include transitionClose(transform);
+    &.open {
+        position: fixed;
+        transform: translateX(0);
+        @include transitionOpen(transform);
+    }
+    ul {
+        height: 100%;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    li {
+        margin: 0.5rem 0;
+    }
+    a {
+        color: purple;
+        text-decoration: none;
+        font-size: 1.2rem;
+        &:hover,
+        &:active{
+            color: orange;
+        }
+    }
+
+}
+
+@media (max-width: 586px) {
+    .side-drawer.open {
+        position: absolute;        
+    }
+}

@@ -1,0 +1,97 @@
+@import "../Utility/Styles/mixins";
+
+.toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgb(55, 119, 187);
+    height: 56px;
+    margin-left: 0px;
+    @include transitionClose(margin-left);
+    &.open {
+        position: fixed;
+        margin-left: 400px;
+        @include transitionOpen(margin-left);
+    }
+    &:hover {
+        color: #f1f1f1;
+    }
+}
+
+.toolbar__navigation {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.toolbar__logo {
+    margin-left: 1rem;
+    a {    
+        color: white;
+        text-decoration: none;
+        font-size: 1.5rem;
+    }
+    img {
+        display: flex;
+        height: 20%;
+        width: 20%;
+    }
+}
+
+.spacer {
+    flex: 1;
+}
+
+.toolbar__navigation-items {
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+    li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 0.5rem;
+    }
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-decoration: none;
+        &:hover,
+        &:active {
+            color: orange;
+        }
+        span.badge {
+            position: relative;
+            top: -8px;
+            right: 13px;
+            padding: 0.9px 5.5px;
+            border-radius: 50%;
+            font-size: 10px;
+            background: red;
+            color: white;
+        }
+        span.fa-sign-in{
+            cursor: pointer;
+            font-size: 25px;
+            padding: 10px 0;
+        }
+    }
+}
+
+@media (max-width: 586px) {
+    .toolbar {
+        margin-left: 0px;
+        @include transitionClose(margin-left);
+        &.open {
+            margin-left: 70%;
+            @include transitionOpen(margin-left);
+        }
+    } 
+}

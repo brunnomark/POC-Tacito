@@ -1,0 +1,7 @@
+@mixin transitionOpen($prop) {
+    transition: $prop .4s ease-out;
+}
+
+@mixin transitionClose($prop) {
+    transition: $prop .3s ease-in;
+}

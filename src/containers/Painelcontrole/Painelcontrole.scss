@@ -1,0 +1,99 @@
+@import "../../components/Utility/Styles/mixins";
+
+.painelcontrole {
+    padding: 0;
+    margin-left: 0px;
+    @include transitionClose(margin-left);
+    overflow: visible;
+    &.open {
+        position: fixed;
+        margin-left: 400px;
+        @include transitionOpen(margin-left);
+    }
+    h1 {
+        position: fixed;
+        width: 100%;
+        display: flex;
+        background: lightsteelblue;
+        color: white;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 25px;
+        margin-top: 5px;    
+        padding: 10px;
+    }
+    h2 {
+        margin-top: 60px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        float: left;
+        margin-left: 1.5rem;
+        font-size: 20px;
+        span.block-1{
+            display: flex;
+            justify-content: flex-start;
+            width:50%;
+            text-align: center;
+        }
+        span.block-2{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            width: 50%;
+            font-size: 13px;
+            margin: 10px 65px;
+        }
+    }
+    button {
+        position: relative;
+        background: antiquewhite;
+        float: right;
+        padding: 0.4rem;
+        margin: 10px 20px;
+        overflow: hidden;  
+        border-width: 0.1rem;
+        outline: none;
+        border-radius: 2px;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+        font-size: 13px;
+        cursor: pointer;
+        transition: background .3s;
+        &:hover,
+        &:focus {
+            background: gray;
+            color: black;
+            transition: background .3s;
+        }
+        i {
+            color: green;
+        }
+    }
+    ul {
+        padding-left: 15px;
+        display: flex;   
+        width: 100%;
+        flex-direction: column;
+        float: left;
+    }
+    li {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        float: left;
+    }
+}
+
+@media (max-width: 586px) {
+    .painelcontrole {
+        margin-left: 0px;
+        @include transitionClose(margin-left);
+        button {
+            display: none;        
+        }
+        &.open {      
+            margin-left: 70%;
+            @include transitionOpen(margin-left);
+        }
+    }
+}
