@@ -1,11 +1,11 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './App.css';
 import Toolbar from './components/Toolbar/Toolbar';
 import SideDrawer from './components/SideDrawer/SideDrawer';
 import Backdrop from './components/BackDrop/BackDrop';
 import Painelcontrole from './containers/Painelcontrole/Painelcontrole';
 
-class App extends Component {
+class App extends React.PureComponent {
   state = {
     sideDrawerOpen: false
   };
