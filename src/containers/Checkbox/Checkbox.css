@@ -1,0 +1,58 @@
+.checkbox {
+  display: inherit;
+  width: 100%;
+  margin-top: -20px;
+}
+
+.checkbox p {
+  width: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.checkbox span {
+  position: inherit;
+}
+
+.checkbox input[type=checkbox] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px;
+  padding: 10px;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  border: 5px;
+  clear: both;
+  z-index: -1;
+}
+
+.block-a {
+  width: 50%;
+}
+
+.block-b {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  width: 50%;
+  margin: 0 65px;
+}
+/*# sourceMappingURL=Checkbox.css.map */
