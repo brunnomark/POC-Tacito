@@ -21,11 +21,11 @@ const toolbar = props => {
             <div className={"toolbar__navigation-items" + openToolbar}>
                 <ul>
                     <li>
-                        <a href="#">
+                        <a href="/">
                             <BellIcon width='30' height='30' active={false} color={'white'}/>
                             <span class="badge">3</span>
                         </a>
-                        <a>
+                        <a href="/">
                             <span class="fa fa-sign-in" aria-hidden="true"/>
                         </a>
                     </li>
