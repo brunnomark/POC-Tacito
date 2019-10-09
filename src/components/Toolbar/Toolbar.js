@@ -2,6 +2,7 @@ import React from 'react';
 import './Toolbar.css';
 import LogoVLI from '../../assets/logos/vli-logo.png';
 import DrawerToggleButton from '../SideDrawer/DrawerToggleButton';
+import BellIcon from 'react-bell-icon';
 
 const toolbar = props => {
     let toolbarClasses = 'toolbar';
@@ -19,8 +20,15 @@ const toolbar = props => {
             <div className="spacer"></div>
             <div className="toolbar__navigation-items">
                 <ul>
-                    <li><a href="/">Products</a></li>
-                    <li><a href="/">Users</a></li>
+                    <li>
+                        <a href="#">
+                            <BellIcon width='30' height='30' active={false} color={'white'}/>
+                            <span class="badge">3</span>
+                        </a>
+                        <a>
+                            <span class="fa fa-sign-in" aria-hidden="true"/>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </nav>
