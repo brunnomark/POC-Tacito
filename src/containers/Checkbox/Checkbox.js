@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Checkbox from '@material-ui/core/Checkbox';
 import './Checkbox.css';
 
 class checkbox extends Component {
@@ -18,12 +17,13 @@ class checkbox extends Component {
 
     render() {
         return (
-            <div className="checkbox">
-                <Checkbox
+            <div className="checkbox"> 
+                <input
+                    className="checkbox__input" 
+                    type="checkbox"
                     checked={this.state.checked}
-                    onChange={this.handleChange}        
-                    inputProps={this.props.inputProps}
-                />
+                    onChange={this.handleChange}>
+                </input>
                 <p>
                     <span className="block-a">{this.props.value.name}</span>
                     <span className="block-b">{this.props.value.lastExecutionDate}</span>

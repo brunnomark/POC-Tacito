@@ -4,6 +4,8 @@
   left: 0;
   width: 100%;
   background: #3777bb;
+  -webkit-box-shadow: 1px 0px 7px black;
+          box-shadow: 1px 0px 7px black;
   height: 56px;
   margin-left: 0px;
   -webkit-transition: margin-left 0.3s ease-in;
@@ -54,6 +56,18 @@
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+}
+
+.toolbar__navigation-items {
+  margin-right: 0px;
+  -webkit-transition: margin-right 0.3s ease-in;
+  transition: margin-right 0.3s ease-in;
+}
+
+.toolbar__navigation-items.open {
+  margin-right: 400px;
+  -webkit-transition: margin-right 0.4s ease-out;
+  transition: margin-right 0.4s ease-out;
 }
 
 .toolbar__navigation-items ul {

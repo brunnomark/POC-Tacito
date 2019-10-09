@@ -1,6 +1,6 @@
 import React from 'react';
 import './Painelcontrole.css';
-import Checkbox from '../../components/Checkbox/Checkbox';
+import Checkbox from '../Checkbox/Checkbox';
 import tiposPainelcontrole from '../../components/Utility/TiposPainelcontrole';
 
 const painelcontrole = (props) => {
@@ -17,10 +17,8 @@ const painelcontrole = (props) => {
         return (
             <li>
                 <Checkbox
+                    key={value.name}
                     value={value}
-                    inputProps={{
-                        'aria-label': 'primary checkbox'
-                    }}
                 />
             </li>
         )                

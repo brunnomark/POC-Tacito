@@ -6,6 +6,7 @@
     left: 0;
     width: 100%;
     background: rgb(55, 119, 187);
+    box-shadow: 1px 0px 7px rgba(0, 0, 0, 1.5);
     height: 56px;
     margin-left: 0px;
     @include transitionClose(margin-left);
@@ -45,6 +46,12 @@
 }
 
 .toolbar__navigation-items {
+    margin-right: 0px;
+    @include transitionClose(margin-right);
+    &.open {
+        margin-right: 400px;
+        @include transitionOpen(margin-right);
+    }
     ul {
         list-style: none;
         margin: 0;

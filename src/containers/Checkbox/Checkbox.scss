@@ -8,6 +8,20 @@
         align-items: flex-start;
         justify-content: flex-start;
     }
+    span {
+        position: inherit;
+    }
+    input[type=checkbox] {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 20px;
+        padding: 10px;
+        transform: scale(1.5);
+        border: 5px;
+        clear: both;
+        z-index: -1;
+    }
 }
 
 .block-a{

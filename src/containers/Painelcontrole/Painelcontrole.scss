@@ -4,7 +4,7 @@
     padding: 0;
     margin-left: 0px;
     @include transitionClose(margin-left);
-    overflow: visible;
+    overflow: hidden;
     &.open {
         position: fixed;
         margin-left: 400px;
@@ -46,24 +46,47 @@
         }
     }
     button {
-        position: relative;
-        background: antiquewhite;
+        background:#1AAB8A;
+        color:#fff;
+        border:none;
+        position:relative;
+        height:30px;
+        font-size: 0.6em;
         float: right;
-        padding: 0.4rem;
-        margin: 10px 20px;
-        overflow: hidden;  
+        padding:0 2em;
+        cursor:pointer;
+        transition:800ms ease all;
+        outline:none;		
+		overflow: hidden;  
         border-width: 0.1rem;
-        outline: none;
         border-radius: 2px;
         box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
-        font-size: 13px;
-        cursor: pointer;
-        transition: background .3s;
         &:hover,
         &:focus {
-            background: gray;
-            color: black;
-            transition: background .3s;
+            background: #fff;
+            color: #1AAB8A;
+        }
+        &:before,
+        &:after {
+            content:'';
+            position:absolute;
+            top:0;
+            right:0;
+            height:2px;
+            width:0;
+            background: #1AAB8A;
+            transition:400ms ease all;
+        }
+        &:after{
+            right:inherit;
+            top:inherit;
+            left:0;
+            bottom:0;
+        }
+        &:hover:before,
+        &:hover:after {
+            width:100%;
+            transition:800ms ease all;
         }
         i {
             color: green;
