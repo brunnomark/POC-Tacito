@@ -1,4 +1,16 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Comandos úteis
+
+Baixe o projeto rodando o comando 
+### `git clone https://github.com/brunnomark/POC-Tacito.git`
+Restaure os pacotes
+### `npm install`
+Instale algumas extensões úteis do VSCode
+
+-> Live Sass Compiler
+-> Live Server
+-> IntelliSense for CSS class names in HTML
+-> React/Redux/react-router Snippets
 
 ## Available Scripts
 
